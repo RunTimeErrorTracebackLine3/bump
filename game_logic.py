@@ -1,3 +1,5 @@
+import random as r
+
 moves = ["bos-g", "scorpion", "block", "poke", "shark_attack", "tsunami", "snake", "mirror", "wait"]
 
 # whatevers in the right list is what the left thing beats
@@ -23,3 +25,25 @@ def beats(m1: str, m2: str):
         return -1
     else:
         return 0
+    
+def play_round(player1: str, player2: str = None, outcome: str = None):
+    if player2 is None:
+            opponet_move = r.choice(moves)
+    result = beats(player1, player2)
+    if result == 1:
+        outcome = "player1 wins"
+    elif result == -1:
+         outcome = "player2 wins"
+    else:
+         outcome = "draw"
+    return {
+         "outcome": outcome,
+         "result": result,
+         "player1": player1,
+         "player2": player2
+    }
+
+if __name__ == "__main__":
+     import json
+     round_result = play_round("scorpion")
+     print(json.dumps(round_result))
