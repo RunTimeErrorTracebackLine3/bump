@@ -153,7 +153,7 @@ async def main_handler(websocket):
 
 async def main():
     print("Server starting on ws://localhost:8765")
-    async with websockets.serve(main_handler, "localhost", 8765):
+    async with websockets.serve(main_handler, "0.0.0.0", 8765):
         await asyncio.Future()  # Run forever
 
 if __name__ == "__main__":

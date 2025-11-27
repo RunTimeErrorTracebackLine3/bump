@@ -2,15 +2,16 @@ import random as r
 
 moves = ["bos-g", "scorpion", "block", "poke", "shark_attack", "tsunami", "snake", "mirror", "wait"]
 
-# whatevers in the right list is what the left thing beats
+# IMPORTANT
+# LEFT MOVE BEATS ALL MOVES IN THE RIGHT LIST.
 win_moves = {
-    "bos-g": ["scorpion", "spartan", "shark_attack", "tsunami", "wait", "mirror"],
+    "bos-g": ["scorpion", "shark_attack", "tsunami", "wait", "poke"],
     "scorpion": ["block", "wait", "tsunami"],
-    "block": ["shark_attack", "tsunami"],
+    "block": [""],
     "poke": ["mirror", "wait", "shark_attack", "scorpion"],
     "shark_attack": ["tsunami", "wait", "scorpion"],
     "tsunami": ["poke", "snake", "wait"],
-    "snake": ["bos-g", "scorpion", "shark_attack", "poke"],
+    "snake": [""],
     "mirror": ["scorpion", "shark_attack", "tsunami"],
     "wait": [""]
 }
