@@ -9,8 +9,8 @@ win_moves = {
     "scorpion": ["block", "wait", "tsunami"],
     "block": [""],
     "poke": ["mirror", "wait", "shark_attack", "scorpion"],
-    "shark_attack": ["tsunami", "wait", "scorpion"],
-    "tsunami": ["poke", "snake", "wait"],
+    "shark_attack": ["poke", "snake", "wait"],
+    "tsunami": ["tsunami", "wait", "scorpion"],
     "snake": [""],
     "mirror": ["scorpion", "shark_attack", "tsunami", "bos-g"],
     "wait": [""]
